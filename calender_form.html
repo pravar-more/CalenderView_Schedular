@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Calender_form</title>
+    <link href="allCSS.css" rel="stylesheet" type="text/css" />
+    <link href="otherCSS.css" rel="stylesheet" type="text/css" />
+    <script>
+            function alertDataNotInserted(){
+            alert("Data Not Inserted");}
+
+            function faculty_val(){
+              document.getElementById('faculty_msg').innerHTML = (formid.faculty[formid.faculty.selectedIndex].text)
+            }
+
+            function course_val(){
+              document.getElementById('cid_msg').innerHTML = (formid.course[formid.course.selectedIndex].text)
+            }
+
+
+
+var subjectObject = {
+   "1": {
+    "csea": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "cseb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "ita": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "itb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "etcb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ei": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mec": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+  },
+  "2":{
+    "ei": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etcb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "csea": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "cseb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ita": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mech": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+
+  },
+  "3": {
+    "csea": ["ACR3C1","CER3C2","CER3C3","CER3C4","CER3G1","CER3L1","SCR3S3","CER3V3"],
+    "cseb": ["ACR3C1","CER3C2","CER3C3","CER3C4","CER3G1","CER3L1","SCR3S3","CER3V3"],
+    "ita": ["AIR3C1","ITR3C2","ITR3C3","ITR3C4","ITR3G1","ITR3L1","SIR3S3","ITR3V3"],
+    "itb": ["AIR3C1","ITR3C2","ITR3C3","ITR3C4","ITR3G1","ITR3L1","SIR3S3","ITR3V3"],
+    "etca": ["ATR3C1","ETR3C2","ETR3C3","ETR3C4","ETR3G1","ETR3L1","SER3S3","ETR3V3"],
+    "etcb": ["ATR3C1","ETR3C2","ETR3C3","ETR3C4","ETR3G1","ETR3L1","SER3S3","ETR3V3"],
+    "ei": ["AER3C1","EIR3C2","EIR3C3","EIR3C4","EIR3G1","EIR3L1","SER3S3","EIR3V3"],
+    "mech": ["AMR3C1","MER3C2","MER3C3","MER3C4","MER3G1","MER3L1","SMR3S3","MER3V3"],
+    "civil": ["AVR3C1","VLR3C2","VLR3C3","VLR3C4","VLR3G1","VLR3L1","SVR3S3","VLR3V3"]
+  },
+  "4": {
+    "csea": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "cseb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "ita": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "itb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "etcb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ei": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mec": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+  },
+  "5": {
+    "csea": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "cseb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "ita": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "itb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "etcb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ei": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mec": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+  },
+  "6": {
+    "csea": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "cseb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "ita": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "itb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "etcb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ei": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mec": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+  },
+  "7": {
+    "csea": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "cseb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "ita": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "itb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "etcb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ei": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mec": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+  },
+  "8": {
+    "csea": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "cseb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "ita": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "itb": ["AMR1C1","ACR1C2","MER1C3","ETR1C4","MER1C5","SSR1S1","BER1V1"],
+    "etca": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "etcb": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "ei": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "mec": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"],
+    "civil": ["AMR2C1","APR2C2","MER2C3","EIR2C4","COR2C5","SSR2S2","BER2V2"]
+  }
+}
+window.onload = function() {
+  var semSel = document.getElementById("semester");
+  var branchSel = document.getElementById("branch");
+  var courseSel = document.getElementById("course");
+  for (var x in subjectObject) {
+    semSel.options[semSel.options.length] = new Option(x, x);
+  }
+  semSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    courseSel.length = 1;
+    branchSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      branchSel.options[branchSel.options.length] = new Option(y, y);
+    }
+  }
+  branchSel.onchange = function() {
+    //empty Chapters dropdown
+    courseSel.length = 1;
+    //display correct values
+    var z = subjectObject[semSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      courseSel.options[courseSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+
+    </script>
+        
+  </head>
+  <body>
+    <div class="view_calender">
+      <p></p>
+    </div>
+    <div class="form">
+  <form name='formid'>
+
+  Semester: <select name="semester" id="semester">
+    <option value="" selected="selected">-----Semester------</option>
+  </select>
+  <br><br>
+  Branch: <select name="branch" id="branch">
+    <option value="" selected="selected">-----Please select Semester-----</option>
+  </select>
+  <br><br>
+  Course: <select id="course" name="course" onchange="course_val()">
+    <option value="" selected="selected">-----Please select Branch-----</option>
+     <!-- <% for(i=0;i<=.length();i++){ %> 
+    <option value="<%name%>">Computer Graphics</option>
+
+    <option value="<%name2%>"><%=name2%></option>
+    <% }%> --></select>
+     Faculty:<select name="faculty" id ="faculty" onchange="faculty_val()">
+    <option></option>
+    <!-- <% for(i=0;i<=.length();i++){ %> -->
+    <option value="<%name%>">HKM</option>
+
+    <option value="<%name2%>"><%=name2%></option>
+    <!-- <% }%> -->
+  </select>
+
+  <br><br>
+
+  </form>
+      <p><label id='cid_msg'></label></p>
+      <p><label id='faculty_msg'></label></p>
+
+
+    
+
+    </div>
+
+
+
+
+  </body>
+  
+
+
+  </html>
+

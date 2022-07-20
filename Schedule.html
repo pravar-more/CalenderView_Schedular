@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html itemscope="" lang="en-IN">
+
+<head>
+    <title>IET Time Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/Scheduler.js"></script>
+</head>
+
+<body onload="OnLoad()">
+    <!--<button class="rHbtn" onclick="location.href='./Index.html'">Requests Page</button>-->
+    <div id="main">
+        <!--<button class="lbtn" onclick="Refresh()">Refresh</button>-->
+        <h1>Time Table</h1>
+        <!--<button class="rbtn" onclick="PopUp()">Add new Setting</button>-->
+        <table class="reqList">
+            <thead>
+                <tr>
+                    <th class="reqListHead">Days</th>
+                    <th class="reqListHead">8:00 AM - 9:00 AM</th>
+                    <th class="reqListHead">9:00 AM - 10:00 AM</th>
+                    <th class="reqListHead">10:00 AM - 11:00 AM</th>
+                    <th class="reqListHead">11:00 AM - 12:00 PM</th>
+                    <th class="reqListHead">12:00 PM - 1:00 PM</th>
+                    <th class="reqListHead">1:00 PM - 2:00 PM</th>
+                    <th class="reqListHead">2:00 PM - 3:00 PM</th>
+                    <th class="reqListHead">3:00 PM - 4:00 PM</th>
+                    <th class="reqListHead">4:00 PM - 5:00 PM</th>
+                    <!--<th class="reqListHead">Value</th>-->
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <div class="title">header</div>
+            <button class="close-button" onclick="closeUpdater()">&times;</button>
+        </div>
+        <div class="popup-body">
+
+            <br><br>
+
+            <br><br>
+            <div id="submit">
+
+            </div>
+        </div>
+    </div>
+    <div id="overlay" onclick="closeUpdater()"></div>
+</body>
+
+</html>

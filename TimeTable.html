@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html itemscope="" lang="en-IN">
+
+<head>
+    <title>IET Time Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+
+
+    <script src="js/TT.js"></script>
+</head>
+
+<body onload="OnLoad()">
+
+
+
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+          <span class="navbar-toggler-icon"></span>
+      
+        </button>
+      
+      
+      
+        <img class="col-xs-12" src="../davv.png" width="100" height="100" alt="iet-davv">
+      
+       
+          <a class="navbar-brand col-md-5 col-xs-12 " href="#"><h2 style="color:aliceblue"><b>Institute of <br class="rwd-break">Engineering &amp; <br class="rwd-break"> Technology 
+          <h6 class="col-md-12 col-xs-12 text-right" style="color:aliceblue;margin-top: auto;margin-left: 90px ">Student Information System</h6></b></h2></a>
+      
+        <br><p style="color: aliceblue"></p>
+      
+        <br>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <br><br>
+        
+        <div class="col-md-5"></div>
+      
+          <ul class="navbar-nav mr-auto">
+      
+            
+      
+            <li class="nav-item">
+      
+             <div class="col-md-2"> <a class="nav-link" href="#" style="color: aliceblue">About</a></div>
+      
+            </li>
+      
+           
+      
+            
+          </ul>
+      
+          </div>
+      
+          
+      
+      </nav>
+    <main>  
+   <!-- <button onchange="OnLoad()"></button>-->
+    <!--<button class="rHbtn" onclick="location.href='./Index.html'">Requests Page</button>-->
+    <div id="main">
+        <!--<button class="lbtn" onclick="Refresh()">Refresh</button>-->
+        <h1>Time Table TT</h1>
+        <!--<button class="rbtn" onclick="PopUp()">Add new Setting</button>-->
+        <table class="reqList">
+            <thead>
+                <tr>
+                    <th class="reqListHead">Days</th>
+                    <th class="reqListHead">8:00 AM - 9:00 AM</th>
+                    <th class="reqListHead">9:00 AM - 10:00 AM</th>
+                    <th class="reqListHead">10:00 AM - 11:00 AM</th>
+                    <th class="reqListHead">11:00 AM - 12:00 PM</th>
+                    <th class="reqListHead">12:00 PM - 1:00 PM</th>
+                    <th class="reqListHead">1:00 PM - 2:00 PM</th>
+                    <th class="reqListHead">2:00 PM - 3:00 PM</th>
+                    <th class="reqListHead">3:00 PM - 4:00 PM</th>
+                    <th class="reqListHead">4:00 PM - 5:00 PM</th>
+                    <!--<th class="reqListHead">Value</th>-->
+                </tr>
+            </thead>
+            <tbody id="table_body">
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <div class="title">header</div>
+            <button class="close-button" onclick="closeUpdater()">&times;</button>
+        </div>
+        <div class="popup-body">
+          <!-- Subject Name: <input type="text" id="subjectName"></input>
+            <br><br>
+            Faculty: <input type="" id="teacherName"></input>
+            <br><br>
+        -->
+            Semester: <select class="semester" name="semester" id="semester">
+                <option value="" selected="selected">-----Semester------</option>
+                <option>hrllo</option>
+              </select>
+              <br><br>
+              Branch: <select class="branch" name="branch" id="branch">
+                <option value="" selected="selected">-----Please select Semester-----</option>
+              </select>
+              <br><br>
+              Course: <select id="course" class="course" name="course" onchange="course_val()">
+                <option value="" selected="selected">-----Please select Branch-----</option>
+                </select> 
+                 Faculty:<select name="faculty" class="faculty" id ="faculty" onchange="faculty_val()">
+                <option></option>
+              </select>
+            
+              <br><br>
+            
+            <div id="submit">
+            </div>
+        </div>
+    </div>
+    <div id="overlay" onclick="closeUpdater()"></div>
+    </main>
+    
+    
+    <footer>
+    
+        <div class="footer" id="footer">
+    
+            <div class="container">
+    
+                <div class="row">
+    
+                    <div class="col-lg-10 col-md-9">
+    
+                         <h3> Online IET</h3>
+                       <p>Website managed by OnlineIET Group
+    
+                       for any queries contact at: 19bcs053@ietdavv.edu.in 
+    
+                       
+    
+                       </p>
+    
+    
+               <div id="bottom">
+    
+                <p class=""> Copyright © 2022 IET DAVV. All right reserved. </p>
+    
+               
+    
+            </div>
+    
+                    </div>
+                    
+    
+                    <div class="col-lg-2  col-md-3 col-sm-4 col-xs-6 " style="text-align: center;">
+    
+                        <a href="http://www.ietdavv.edu.in/"> <h3>IET DAVV </h3></a> 
+                        <div class="row mx-auto " style="width: 80%">
+                       <a href="https://play.google.com/store/apps/details?id=com.taikhoom.onlineiet&amp;hl=en" style="color: white;">
+                       <i class="fa fa-android fa-2x"></i><h6>OnlineIET @ Google Play</h6>
+                       </a>
+                       </div>
+    
+                    </div>
+    
+                   
+    
+                </div>
+    
+                <!--/.row--> 
+    
+            </div>
+    
+            <!--/.container--> 
+    
+    
+        </div>
+    
+        <!--/.footer-->
+    </footer>
+</body>
+
+</html>
