@@ -5,17 +5,16 @@
     <title>IET Time Table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
 
 
 
@@ -36,7 +35,7 @@
       
       
       
-        <img class="col-xs-12" src="../davv.png" width="100" height="100" alt="iet-davv">
+       <!--   <img class="col-xs-12" src="#" width="100" height="100" alt="iet-davv">-->
       
        
           <a class="navbar-brand col-md-5 col-xs-12 " href="#"><h2 style="color:aliceblue"><b>Institute of <br class="rwd-break">Engineering &amp; <br class="rwd-break"> Technology 
@@ -77,6 +76,7 @@
         <!--<button class="lbtn" onclick="Refresh()">Refresh</button>-->
         <h1>Time Table TT</h1>
         <!--<button class="rbtn" onclick="PopUp()">Add new Setting</button>-->
+        <form action="submit" > 
         <table class="reqList">
             <thead>
                 <tr>
@@ -93,10 +93,11 @@
                     <!--<th class="reqListHead">Value</th>-->
                 </tr>
             </thead>
+            
             <tbody id="table_body">
                 <tr></tr>
             </tbody>
-        </table>
+        </table><button class="submit">submit</button></form>
     </div>
     <div class="popup" id="popup">
         <div class="popup-header">
@@ -104,12 +105,12 @@
             <button class="close-button" onclick="closeUpdater()">&times;</button>
         </div>
         <div class="popup-body">
-          <!-- Subject Name: <input type="text" id="subjectName"></input>
+          Subject Name: <input type="text" id="subjectName"></input>
             <br><br>
             Faculty: <input type="" id="teacherName"></input>
             <br><br>
-        -->
-            Semester: <select class="semester" name="semester" id="semester">
+        
+            <!--Semester: <select class="semester" name="semester" id="semester">
                 <option value="" selected="selected">-----Semester------</option>
                 <option>hrllo</option>
               </select>
@@ -124,7 +125,7 @@
                  Faculty:<select name="faculty" class="faculty" id ="faculty" onchange="faculty_val()">
                 <option></option>
               </select>
-            
+            -->
               <br><br>
             
             <div id="submit">
@@ -170,8 +171,6 @@
     
                         <a href="http://www.ietdavv.edu.in/"> <h3>IET DAVV </h3></a> 
                         <div class="row mx-auto " style="width: 80%">
-                       <a href="https://play.google.com/store/apps/details?id=com.taikhoom.onlineiet&amp;hl=en" style="color: white;">
-                       <i class="fa fa-android fa-2x"></i><h6>OnlineIET @ Google Play</h6>
                        </a>
                        </div>
     
@@ -180,17 +179,12 @@
                    
     
                 </div>
-    
-                <!--/.row--> 
-    
+        
             </div>
-    
-            <!--/.container--> 
-    
+      
     
         </div>
     
-        <!--/.footer-->
     </footer>
 </body>
 
