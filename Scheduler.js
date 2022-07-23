@@ -1,8 +1,8 @@
 var newJSON=[1,2,3,4,5,6];
 var oldJSON=[];
-var newJSONN;
+//var newJSONN;
 var weekDays=["Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"];
-/*var data = JSON.parse('[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
+var data = JSON.parse('[[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
         '{"subjectName":"OOPS", "teacherName":"Smith"},'+
         '{"subjectName":"Data Structures", "teacherName":"Smith"},'+
         '{"subjectName":"Algorithms", "teacherName":"Smith"},'+
@@ -10,23 +10,72 @@ var weekDays=["Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"];
         '{"subjectName":"Operating System", "teacherName":"Smith"},'+
         '{"subjectName":"Technical English", "teacherName":"Smith"},'+
         '{"subjectName":"Enviromental", "teacherName":"Smith"},'+
-        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ]');*/
+        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ],'+
+
+        '[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
+        '{"subjectName":"OOPS", "teacherName":"Smith"},'+
+        '{"subjectName":"Data Structures", "teacherName":"Smith"},'+
+        '{"subjectName":"Algorithms", "teacherName":"Smith"},'+
+        '{"subjectName":"Computer Networks", "teacherName":"Smith"},'+
+        '{"subjectName":"Operating System", "teacherName":"Smith"},'+
+        '{"subjectName":"Technical English", "teacherName":"Smith"},'+
+        '{"subjectName":"Enviromental", "teacherName":"Smith"},'+
+        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ],'+
+
+        '[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
+        '{"subjectName":"OOPS", "teacherName":"Smith"},'+
+        '{"subjectName":"Data Structures", "teacherName":"Smith"},'+
+        '{"subjectName":"Algorithms", "teacherName":"Smith"},'+
+        '{"subjectName":"Computer Networks", "teacherName":"Smith"},'+
+        '{"subjectName":"Operating System", "teacherName":"Smith"},'+
+        '{"subjectName":"Technical English", "teacherName":"Smith"},'+
+        '{"subjectName":"Enviromental", "teacherName":"Smith"},'+
+        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ],'+
+
+        '[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
+        '{"subjectName":"OOPS", "teacherName":"Smith"},'+
+        '{"subjectName":"Data Structures", "teacherName":"Smith"},'+
+        '{"subjectName":"Algorithms", "teacherName":"Smith"},'+
+        '{"subjectName":"Computer Networks", "teacherName":"Smith"},'+
+        '{"subjectName":"Operating System", "teacherName":"Smith"},'+
+        '{"subjectName":"Technical English", "teacherName":"Smith"},'+
+        '{"subjectName":"Enviromental", "teacherName":"Smith"},'+
+        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ],'+
+
+        '[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
+        '{"subjectName":"OOPS", "teacherName":"Smith"},'+
+        '{"subjectName":"Data Structures", "teacherName":"Smith"},'+
+        '{"subjectName":"Algorithms", "teacherName":"Smith"},'+
+        '{"subjectName":"Computer Networks", "teacherName":"Smith"},'+
+        '{"subjectName":"Operating System", "teacherName":"Smith"},'+
+        '{"subjectName":"Technical English", "teacherName":"Smith"},'+
+        '{"subjectName":"Enviromental", "teacherName":"Smith"},'+
+        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ],'+
+
+        '[{"subjectName":"Proffessional Development", "teacherName":"Doe"},'+
+        '{"subjectName":"OOPS", "teacherName":"Smith"},'+
+        '{"subjectName":"Data Structures", "teacherName":"Smith"},'+
+        '{"subjectName":"Algorithms", "teacherName":"Smith"},'+
+        '{"subjectName":"Computer Networks", "teacherName":"Smith"},'+
+        '{"subjectName":"Operating System", "teacherName":"Smith"},'+
+        '{"subjectName":"Technical English", "teacherName":"Smith"},'+
+        '{"subjectName":"Enviromental", "teacherName":"Smith"},'+
+        '{"subjectName":"Shev Pav", "teacherName":"Vadapav"},{"key":"1234abc","value":"test"} ]]');
 function OnLoad() {
     getRequestListAndFillTable();
 }
 function getRequestListAndFillTable()
 {
-        fetch("data.json")
+        /*fetch("data.json")
              .then(response=>response.json())
-             .then(function(data){
+             .then(function(data){*/
                 newJSON=data;
                 populateRows(document.getElementById("table_body"));
-             })
+             /*})
              .catch(function(err)
              {
                 console.log(err);
-             });
-
+             });*/
 }
 function populateRows(tbody)
 {
